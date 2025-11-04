@@ -163,6 +163,11 @@ if (NOT CUKD_IS_SUBPROJECT)
   add_executable(cukd_sampleHost sampleHost.cu)
   target_link_libraries(cukd_sampleHost PUBLIC cudaKDTree)
 
+
+  add_executable(cukd_debug debug.cu)
+  target_link_libraries(cukd_debug PUBLIC cudaKDTree)
+
+
   if(OpenMP_CXX_FOUND)
     target_link_libraries(cukd_sampleHost PUBLIC OpenMP::OpenMP_CXX)
     target_compile_definitions(cukd_sampleHost PUBLIC OPENMP_FOUND)
