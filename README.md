@@ -1,5 +1,22 @@
 # cudaKDTree - A Library for Building and Querying Left-Balanced (point-)k-d Trees in CUDA
 
+Quick note: This repository contains a set of CUDA based routines for
+efficiently building and performing queries in k-d trees. If k-d trees
+are what you're looking for then there's a good chance that this is
+what you've been looking for - after all a lot of people seem to be
+using it, and seem to be quite happy with it. 
+
+However - if your ultimate goal is to simply perform device (i.e.,
+GPU) based queries for tasks such as find-closest-point, kNN, etc,
+then "might I suggest" to please also have a look at my "cuBQL"
+repository (now hosted on https://github.com/NVIDIA/cuBQL). Unlike
+this repo cuBQL is based on BVHes, and though I don't want to get into
+the weeks of which of those is better on which metric my personal
+conviction is that cuBQL is most likely the more easy and more
+flexible route to whatever you want to do.
+
+# What is this Repo/Codebase?
+
 This repository contains a set of CUDA based routines for efficiently
 building and performing queries in k-d trees. It supports building
 over many different (customizable) input data types, and allows for
@@ -33,6 +50,9 @@ use trade-offs:
 
 ```
 
+Note (iw, Nov 2025): Note these numbers were run on a NVIDIA
+RTX 4090. Still a pretty decent GPU, but not latest and greatest any
+more.
 
 # Introduction
 
